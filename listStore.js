@@ -3,12 +3,17 @@ function listStore(value) {
 }
 
 function giveList() {
-  return sortedList
+  return mySort(list)
+}
+
+function mySort() {
+  var myList = list.slice(0)
+  myList.sort((a, b) => (a - b))
+  console.log(list)
+  return myList
 }
 
 exports.listStore = listStore
 exports.giveList = giveList
 
-var list = [6, 3, 4, 6, 7]
-var sortedList = list.sort((a, b) => (a - b))
-console.log(sortedList)
+var list = []
